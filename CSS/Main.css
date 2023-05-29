@@ -751,7 +751,7 @@ li.Active {
   position: absolute;
   border: 8px solid;
   border-color: black transparent transparent transparent;
-  right: -7px;
+  right: -6px;
   top: -15px;
 }
 .Our-Skills .Skills .Prog-Holder h4:hover {
