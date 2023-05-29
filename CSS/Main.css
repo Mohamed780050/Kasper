@@ -413,7 +413,11 @@ li.Active {
   position: relative;
   overflow: hidden;
   opacity: 1;
-  transition: 0.5s;
+  transition: width 0.5s, opacity 0.5s;
+  -webkit-transition: width 0.5s, opacity 0.5s;
+  -moz-transition: width 0.5s, opacity 0.5s;
+  -ms-transition: width 0.5s, opacity 0.5s;
+  -o-transition: width 0.5s, opacity 0.5s;
 }
 .Protfoiio .Images-Holder .Box:hover .Caption {
   bottom: 0;
