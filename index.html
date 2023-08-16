@@ -4,7 +4,10 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="This is a Website" />
     <title>Template 2</title>
+    <!-- Bootstrup -->
+    <link rel="stylesheet" href="CSS/bootstrap.min.css" />
     <!-- Normalize CSS File -->
     <link rel="stylesheet" href="CSS/Normalize.css" />
     <!-- Icons File -->
@@ -15,42 +18,39 @@
     <link rel="shortcut icon" href="Images/logo.png" type="image/x-icon" />
   </head>
   <body>
+    <button class="to-scroll-up">
+      <i class="fa fa-angle-up fa-2x"></i>
+    </button>
     <!-- Start Header -->
-    <header>
-      <div class="Container">
+    <header class="position-absolute w-100">
+      <div class="container position-relative">
         <a href="#" class="Logo">
           <img loading="lazy" src="Images/logo.png" alt="Logo" />
         </a>
-        <nav>
-          <div class="Toggole">
-            <span></span>
-            <span></span>
-            <span></span>
-          </div>
+        <nav class="d-flex align-items-center">
+          <button class="toggle position-relative">
+            <i class="fa fa-bars fa-2x"></i>
+          </button>
           <ul>
-            <li><a class="Active" href="#">Home</a></li>
-            <li><a href="#Service">Services</a></li>
-            <li><a href="#Protfoiio">Protfolio</a></li>
-            <li><a href="#About-Us">About</a></li>
-            <li><a href="#Price">Pricing</a></li>
-            <li><a href="#Contact">Contact</a></li>
+            <li><a class="active d-block" href="#">Home</a></li>
+            <li><a class="d-block" href="#Service">Services</a></li>
+            <li><a class="d-block" href="#portfolio">Protfolio</a></li>
+            <li><a class="d-block" href="#about-us">About</a></li>
+            <li><a class="d-block" href="#Price">Pricing</a></li>
+            <li><a class="d-block" href="#Contact">Contact</a></li>
           </ul>
-          <div class="Form">
-            <img
-              loading="lazy"
-              src="images/searchengin.svg"
-              alt="research icon"
-            />
+          <div class="form position-relative">
+            <i class="fab fa-searchengin fa-2x w-100"></i>
           </div>
         </nav>
       </div>
     </header>
     <!-- End Header -->
     <!-- start lading -->
-    <section class="Landing">
-      <div class="Overlay"></div>
-      <div class="Text">
-        <div class="Contant">
+    <section class="landing position-relative" id="landing">
+      <div class="overlay position-absolute w-100 h-100 top-0"></div>
+      <div class="text position-absolute d-flex">
+        <div class="contant">
           <h2>
             Hello World!<br />
             We Are Kasper We Make Art
@@ -63,28 +63,16 @@
           </p>
         </div>
       </div>
-      <img
-        loading="lazy"
-        class="Left"
-        src="Images/angle-left.svg"
-        alt="angle left"
-        id="left"
-      />
-      <img
-        loading="lazy"
-        class="Right"
-        src="Images/angle-right.svg"
-        alt="angle right"
-        id="right"
-      />
-      <ul class="Bullets landBul">
+      <i class="fa fa-angle-left fa-3x left position-absolute" id="left"></i>
+      <i class="fa fa-angle-right fa-3x right position-absolute" id="right"></i>
+      <ul class="bullets landBul position-absolute d-flex">
         <li data-numbers="1"></li>
-        <li data-numbers="2" class="Active"></li>
+        <li data-numbers="2" class="active"></li>
         <li data-numbers="3"></li>
       </ul>
     </section>
     <!-- end lading -->
-    <section class="Service" id="Service">
+    <section class="service position-relative" id="Service">
       <div class="Main-Heading">
         <h2>SERVICE</h2>
         <p>
@@ -94,9 +82,9 @@
         </p>
       </div>
       <div class="Srv-container">
-        <div class="srv-box">
+        <div class="srv-box d-flex align-items-center">
           <img loading="lazy" src="Images/desktop.svg" alt="desktop" />
-          <div class="Text1">
+          <div class="text1">
             <h3>Vorem arnet intuitive</h3>
             <p>
               Curabiturarcu erat, accumsan id inperdiet et, porttitor at sem.
@@ -106,9 +94,9 @@
             </p>
           </div>
         </div>
-        <div class="srv-box">
+        <div class="srv-box d-flex align-items-center">
           <img loading="lazy" src="Images/camera-retro.svg" alt="camera" />
-          <div class="Text1">
+          <div class="text1">
             <h3>Vorem arnet intuitive</h3>
             <p>
               Curabiturarcu erat, accumsan id inperdiet et, porttitor at sem.
@@ -118,9 +106,9 @@
             </p>
           </div>
         </div>
-        <div class="srv-box">
+        <div class="srv-box d-flex align-items-center">
           <img loading="lazy" src="Images/sith.svg" alt="sith" />
-          <div class="Text1">
+          <div class="text1">
             <h3>Vorem arnet intuitive</h3>
             <p>
               Curabiturarcu erat, accumsan id inperdiet et, porttitor at sem.
@@ -130,9 +118,9 @@
             </p>
           </div>
         </div>
-        <div class="srv-box">
+        <div class="srv-box d-flex align-items-center">
           <img loading="lazy" src="Images/pen-ruler.svg" alt="pen" />
-          <div class="Text1">
+          <div class="text1">
             <h3>Vorem arnet intuitive</h3>
             <p>
               Curabiturarcu erat, accumsan id inperdiet et, porttitor at sem.
@@ -146,11 +134,16 @@
     </section>
     <!-- Star Design Section -->
     <!-- End Design Section -->
-    <section class="Design">
-      <div class="Image">
-        <img loading="lazy" src="Images/mobile.png" alt="Mobile" />
+    <section class="design d-flex align-items-center position-relative">
+      <div class="image position-relative">
+        <img
+          loading="lazy"
+          src="Images/mobile.png"
+          alt="Mobile"
+          class="position-relative"
+        />
       </div>
-      <div class="Text3">
+      <div class="text3 position-relative">
         <h2>Our Design Comes With...</h2>
         <ul>
           <li>Responsive Design</li>
@@ -161,8 +154,8 @@
       </div>
     </section>
     <!-- Start Protfoiio Section -->
-    <section class="Protfoiio" id="Protfoiio">
-      <div class="Container">
+    <section class="portfolio" id="portfolio">
+      <div class="container">
         <div class="Main-Heading">
           <h2>Protfolio</h2>
           <p>
@@ -171,83 +164,88 @@
             blandit aliquet elit, eget tincidunt.
           </p>
         </div>
-        <div class="Shuffle">
-          <ul>
-            <li data-cat=".all" class="Active">ALL</li>
+        <div class="shuffle">
+          <ul class="d-flex">
+            <li data-cat=".all" class="active">ALL</li>
             <li data-cat=".app">APP</li>
             <li data-cat=".photography">PHOTOGRAPHY</li>
             <li data-cat=".web">WEB</li>
             <li data-cat=".print">PRINT</li>
           </ul>
         </div>
-        <div class="Images-Holder">
-          <div class="Box all app">
+        <div class="Images-Holder position-relative">
+          <div class="box position-relative all app">
             <img loading="lazy" src="Images/shuffle-01.jpg" alt="alone" />
-            <div class="Caption">
+            <div class="Caption position-absolute w-100 fw-bold">
               <h4>Awesome Image</h4>
               <p>App</p>
             </div>
           </div>
-          <div class="Box all app">
+          <div class="box position-relative all app">
             <img loading="lazy" src="Images/shuffle-02.jpg" alt="building" />
-            <div class="Caption">
+            <div class="Caption position-absolute w-100 fw-bold">
               <h4>Awesome Image</h4>
               <p>App</p>
             </div>
           </div>
-          <div class="Box all photography">
+          <div class="box position-relative all photography">
             <img loading="lazy" src="Images/shuffle-03.jpg" alt="universe" />
-            <div class="Caption">
+            <div class="Caption position-absolute w-100 fw-bold">
               <h4>Awesome Image</h4>
               <p>photography</p>
             </div>
           </div>
-          <div class="Box all photography">
+          <div class="box position-relative all photography">
             <img loading="lazy" src="Images/shuffle-04.jpg" alt="white road" />
-            <div class="Caption">
+            <div class="Caption position-absolute w-100 fw-bold">
               <h4>Awesome Image</h4>
               <p>photography</p>
             </div>
           </div>
-          <div class="Box all web">
+          <div class="box position-relative all web">
             <img loading="lazy" src="Images/shuffle-05.jpg" alt="purple guy" />
-            <div class="Caption">
+            <div class="Caption position-absolute w-100 fw-bold">
               <h4>Awesome Image</h4>
               <p>web</p>
             </div>
           </div>
-          <div class="Box all web">
+          <div class="box position-relative all web">
             <img loading="lazy" src="Images/shuffle-06.jpg" alt="some stuff" />
-            <div class="Caption">
+            <div class="Caption position-absolute w-100 fw-bold">
               <h4>Awesome Image</h4>
               <p>web</p>
             </div>
           </div>
-          <div class="Box all print">
+          <div class="box position-relative all print">
             <img loading="lazy" src="Images/shuffle-07.jpg" alt="elevator" />
-            <div class="Caption">
+            <div class="Caption position-absolute w-100 fw-bold">
               <h4>Awesome Image</h4>
               <p>print</p>
             </div>
           </div>
-          <div class="Box all print">
+          <div class="box position-relative all print">
             <img loading="lazy" src="Images/shuffle-08.jpg" alt="octupos" />
-            <div class="Caption">
+            <div class="Caption position-absolute w-100 fw-bold">
               <h4>Awesome Image</h4>
               <p>print</p>
             </div>
           </div>
         </div>
-        <a href="#" class="More">More</a>
+        <a href="#" class="more d-block">More</a>
       </div>
     </section>
     <!-- End Protfoiio Section -->
     <!-- Start Video Section -->
-    <section class="Video">
-      <video autoplay muted loop>
+    <section class="video position-relative">
+      <video
+        autoplay
+        muted
+        loop
+        class="position-relative w-100 overflow-hidden"
+      >
         <source src="video/awesome-video.mp4" type="video/mp4" />
       </video>
-      <div class="Text">
+      <div class="text w-100 position-absolute">
         <h2>Super Awesome Video Here</h2>
         <p>Its All You Need</p>
         <button>See More</button>
@@ -255,8 +253,8 @@
     </section>
     <!-- End Video Section -->
     <!-- Start About Section -->
-    <section class="About-Us" id="About-Us">
-      <div class="Container">
+    <section class="about-us overflow-hidden text-center" id="about-us">
+      <div class="container overflow-hidden">
         <div class="Main-Heading">
           <h2>About Us</h2>
           <p>
@@ -265,31 +263,36 @@
             blandit aliquet elit, eget tincidunt.
           </p>
         </div>
-        <img loading="lazy" src="Images/about.png" alt="Devices" />
+        <img
+          loading="lazy"
+          src="Images/about.png"
+          alt="Devices"
+          class="position-relative"
+        />
       </div>
     </section>
     <!-- End About Section -->
     <!-- Start Statistics Section -->
-    <section class="Statistics">
-      <div class="Container">
+    <section class="statistics position-relative text-center">
+      <div class="container position-relative">
         <div class="box">
           <i class="fas fa-thumbs-up"></i>
-          <div class="Number" data-goal="1236">0</div>
+          <div class="number fw-bold" data-goal="1236">0</div>
           <p>Completed Drinks</p>
         </div>
         <div class="box">
           <i class="far fa-check-circle"></i>
-          <div class="Number" data-goal="256">0</div>
+          <div class="number fw-bold" data-goal="256">0</div>
           <p>Completed Projects</p>
         </div>
         <div class="box">
           <i class="far fa-envelope"></i>
-          <div class="Number" data-goal="7743">0</div>
+          <div class="number fw-bold" data-goal="7743">0</div>
           <p>Mail Sent</p>
         </div>
         <div class="box">
           <i class="fas fa-star"></i>
-          <div class="Number" data-goal="17">0</div>
+          <div class="number fw-bold" data-goal="17">0</div>
           <p>Awards Received</p>
         </div>
       </div>
@@ -297,39 +300,41 @@
     <!-- End Statistics Section -->
     <!-- Start Skill Section -->
     <section class="Our-Skills">
-      <div class="Container">
-        <div class="Testimoneals">
-          <h3>Testimoneals</h3>
-          <p>
-            Curabitur arcu erat, accumsan id imperiet et, porttitor at setn.
-            mauris<br />
-            blandit aliquet elit, eget tincidunt.
-          </p>
-          <div class="Content">
+      <div class="container d-flex flex-wrap">
+        <div class="testimoneals w-100">
+          <div class="Main-Heading">
+            <h2>Testimoneals</h2>
+            <p>
+              Curabitur arcu erat, accumsan id imperiet et, porttitor at setn.
+              mauris<br />
+              blandit aliquet elit, eget tincidunt.
+            </p>
+          </div>
+          <div class="content d-flex align-items-center">
             <img loading="lazy" src="Images/skills-01.jpg" alt="Skills" />
-            <div class="Text">
+            <div class="text">
               Curabitur arcu erat, accumsan id imperiet et, porttitor at setn.
               mauris<br />
               blandit aliquet elit, eget tincidunt.
               <p>John Doe, CEO</p>
             </div>
           </div>
-          <div class="Content">
+          <div class="content d-flex align-items-center">
             <img loading="lazy" src="Images/skills-02.jpg" alt="Skills" />
-            <div class="Text">
+            <div class="text">
               Curabitur arcu erat, accumsan id imperiet et, porttitor at setn.
               mauris<br />
               blandit aliquet elit, eget tincidunt.
               <p>John Doe, CEO</p>
             </div>
           </div>
-          <ul class="Bullets ou">
+          <ul class="bullets ou">
             <li></li>
-            <li class="Active"></li>
+            <li class="active"></li>
             <li></li>
           </ul>
         </div>
-        <div class="Skills">
+        <div class="skills w-100">
           <h3>Skills</h3>
           <p>
             Curabitur arcu erat, accumsan id imperiet et, porttitor at setn.
@@ -366,7 +371,7 @@
     <!-- End Skill Section -->
     <!-- Start Quote Section -->
     <section class="Quote">
-      <div class="Container">
+      <div class="container">
         <q
           >Curabitur arcu erat, accumsan id imperiet et, porttitor at setn.
           mauris blandit aliquet elit, eget tincidunt.
@@ -377,7 +382,7 @@
     <!-- End Quote Section -->
     <!-- Start Price Section -->
     <section class="Price" id="Price">
-      <div class="Container">
+      <div class="container">
         <div class="Main-Heading">
           <h2>Pricing</h2>
           <p>
@@ -448,14 +453,14 @@
             </div>
           </div>
         </div>
-        <p class="Contact-Text">Contact us if you have special request</p>
+        <p class="Contact-text">Contact us if you have special request</p>
         <a href="#" class="Contact-Link"> Contact Us </a>
       </div>
     </section>
     <!-- End Price Section -->
     <!-- Start Subscribe -->
-    <section class="Subscribe">
-      <div class="Container">
+    <section class="subscribe">
+      <div class="container">
         <form action="#">
           <i class="far fa-envelope fa-lg"></i>
           <input type="email" name="Mail" placeholder="Your Email" />
@@ -470,7 +475,7 @@
     <!-- End Subscribe -->
     <!-- Strat Contact -->
     <section class="Contact" id="Contact">
-      <div class="Container">
+      <div class="container">
         <div class="Main-Heading">
           <h2>Contact</h2>
           <p>
@@ -479,43 +484,44 @@
             blandit aliquet elit, eget tincidunt.
           </p>
         </div>
-      </div>
-      <div class="Content">
-        <form action="#">
-          <input
-            class="Main-Input"
-            type="text"
-            name="Name"
-            placeholder="Your Name"
-          />
-          <input
-            class="Main-Input"
-            type="email"
-            name="mail"
-            placeholder="Your Email"
-          />
-          <textarea
-            class="Main-Input"
-            name="Message"
-            placeholder="Your Message"
-          ></textarea>
-          <input type="submit" value="Send Message" />
-        </form>
-        <div class="Info">
-          <h4>Get In Touch</h4>
-          <span class="Phone">+00 123.456.789</span>
-          <span class="Phone">+00 123.456.789</span>
-          <h4>Where We Are</h4>
-          <address>
-            Awesome Address 17<br />
-            New Yourk, NYC<br />
-            123-456-789<br />
-            USA
-          </address>
+        <div class="Content">
+          <form action="#">
+            <input
+              class="Main-Input"
+              type="text"
+              name="Name"
+              placeholder="Your Name"
+            />
+            <input
+              class="Main-Input"
+              type="email"
+              name="mail"
+              placeholder="Your Email"
+            />
+            <textarea
+              class="Main-Input"
+              name="Message"
+              placeholder="Your Message"
+            ></textarea>
+            <input type="submit" value="Send Message" />
+          </form>
+          <div class="Info">
+            <h4>Get In Touch</h4>
+            <span class="Phone">+00 123.456.789</span>
+            <span class="Phone">+00 123.456.789</span>
+            <h4>Where We Are</h4>
+            <address>
+              Awesome Address 17<br />
+              New Yourk, NYC<br />
+              123-456-789<br />
+              USA
+            </address>
+          </div>
         </div>
       </div>
     </section>
     <!-- End Contact -->
+    <script src="JavaScript/bootstrap.bundle.min.js"></script>
     <script src="JavaScript/Main.js"></script>
   </body>
 </html>
